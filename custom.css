@@ -1,0 +1,122 @@
+:root {
+    --ewu-navy: #003366;
+    --ewu-navy-dark: #002244;
+    --ewu-gold: #d4af37;
+    --ewu-gold-hover: #b89628;
+    --bg-light: #f4f6f9;
+    --sidebar-width: 260px;
+}
+
+body {
+    background-color: var(--bg-light);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: #333;
+}
+
+/* --- Sidebar Design --- */
+.sidebar {
+    width: var(--sidebar-width);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, var(--ewu-navy), var(--ewu-navy-dark));
+    color: white;
+    padding-top: 25px;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.sidebar .brand {
+    text-align: center;
+    padding: 0 20px 20px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+}
+
+.sidebar .brand h5 {
+    color: var(--ewu-gold);
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 5px 0 0 0;
+}
+
+.sidebar a {
+    padding: 14px 25px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    transition: all 0.25s ease-in-out;
+    font-weight: 500;
+}
+
+.sidebar a:hover, .sidebar a.active {
+    background-color: rgba(212, 175, 55, 0.15);
+    color: var(--ewu-gold);
+    border-left: 5px solid var(--ewu-gold);
+}
+
+/* --- Content Wrapper --- */
+.main-content {
+    margin-left: var(--sidebar-width);
+    padding: 35px;
+}
+
+.top-bar {
+    background: white;
+    padding: 18px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* --- Colorful Stat Cards --- */
+.stat-card {
+    border: none;
+    border-radius: 16px;
+    color: white;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+}
+
+.bg-gradient-blue { background: linear-gradient(135deg, #003366, #0055a5); }
+.bg-gradient-green { background: linear-gradient(135deg, #059669, #10b981); }
+.bg-gradient-purple { background: linear-gradient(135deg, #7c3aed, #a855f7); }
+.bg-gradient-gold { background: linear-gradient(135deg, #d4af37, #f59e0b); }
+
+/* --- Table & Form Styling --- */
+.custom-card {
+    background: white;
+    border-radius: 14px;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+}
+
+.table-ewu thead {
+    background-color: var(--ewu-navy);
+    color: white;
+}
+
+.btn-ewu {
+    background-color: var(--ewu-gold);
+    color: var(--ewu-navy-dark);
+    font-weight: 600;
+    border: none;
+}
+
+.btn-ewu:hover {
+    background-color: var(--ewu-gold-hover);
+    color: var(--ewu-navy-dark);
+}
